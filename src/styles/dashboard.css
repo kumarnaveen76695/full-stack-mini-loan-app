@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  /* Title */
+  .dashboard-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .dashboard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dashboard-form label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .dashboard-form input,
+  .dashboard-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .dashboard-form input:focus,
+  .dashboard-form select:focus {
+    border-color: #4CAF50;
+  }
+  
+  .dashboard-form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .dashboard-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .dashboard-form button:active {
+    background-color: #388e3c;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  /* Loan Details */
+  .loan-details {
+    margin-top: 20px;
+  }
+  
+  .loan-details h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .loan-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .loan-details h4 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .loan-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .loan-details ul li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+  
+  .loan-details ul li strong {
+    color: #333;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 480px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    .dashboard-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .dashboard-form label,
+    .dashboard-form input,
+    .dashboard-form select {
+      font-size: 0.9rem;
+    }
+  
+    .loan-details h3,
+    .loan-details h4 {
+      font-size: 1.1rem;
+    }
+  }
+  /* Style the 'Mark as Paid' button */
+.pay-button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .pay-button:hover {
+    background-color: darkgreen;
+  }
+  
