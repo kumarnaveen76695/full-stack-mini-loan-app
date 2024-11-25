@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+Full Stack Mini Loan App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo:
+Access the deployed application here: https://full-stack-mini-loan-app.vercel.app/
 
-## Available Scripts
+Repository:
+GitHub Repository: https://github.com/kumarnaveen76695/full-stack-mini-loan-app.git
 
-In the project directory, you can run:
+Project Overview
+The Mini Loan App is a full-stack application that allows customers to apply for loans and make repayments, while administrators can approve loans and manage the system. The app has the following key functionalities:
 
-### `npm start`
+User Authentication: Secure login and registration for customers and administrators.
+Loan Management:
+Customers can create loan requests.
+Admins can approve loans.
+Repayment Management:
+Customers can view their loans and scheduled repayments.
+Customers can make repayments and track the status of their loans.
+State Management:
+Loans and repayments transition between PENDING, APPROVED, and PAID states.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Customer Features:
 
-### `npm test`
+Register/Login: Secure registration and login using JWT authentication.
+Loan Requests: Submit loan requests with the amount and term.
+View Loans: View loans belonging to the logged-in user.
+Repayments: Add repayments and track the status of repayments.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Admin Features:
 
-### `npm run build`
+Approve Loans: Approve pending loans requested by customers.
+Manage Loans: Update loan statuses and manage customer repayments.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Technology Stack:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend: HTML5, CSS, JavaScript (Minimal UI)
+Backend: Node.js, Express.js
+Database: MongoDB
+Authentication: JWT and bcrypt for secure user authentication
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To satrt this project:
+npm start
 
-### `npm run eject`
+To install packages are all for the :
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+API Endpoints:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Authentication
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+POST /api/auth/register: Register a new user (customer/admin).
+POST /api/auth/login: Authenticate a user and return a JWT token.
+Loan Management:
+POST /api/loans: Create a new loan request.
+GET /api/loans: Fetch loans (policy-based to fetch customer-specific loans).
+PUT /api/loans/:loanId/approve: Approve a pending loan (admin only).
+Repayment Management:
+POST /api/repayments: Add a repayment for a loan.
+GET /api/repayments: Fetch repayment details for a customer’s loan.
+Usage Instructions
+For Customers:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Register: Use the registration form to create a customer account.
+Login: Log in with your email and password.
+Apply for a Loan: Submit a loan request by entering the loan amount and term.
+View Loans: Check your loan details, including status and repayment schedule.
+Make Repayments: Add repayments for approved loans.
+For Admins:
 
-## Learn More
+Login: Use your admin account to log in.
+Approve Loans: Approve pending loan requests from customers.
+Manage Loans: Update repayment and loan statuses as required.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Exapmle to testing code:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+//patch url for gteing http://localhost:5000/api/loans/67401fbd142c0bd8de7f2d11/approve
+//posturl for register http://localhost:5000/api/auth/register
+# {
+#   "name": "test1",
+#   "email": "test1@gmail.com",
+#   "password": "test1",
+#   "role": "customer" 
+# }
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+//posturl for login http://localhost:5000/api/auth/login
+# {
+  
+#   "email": "test1@gmail.com",
+#   "password": "test1",
+#   "role": "customer" 
+# }
+//posturl for loans http://localhost:5000/api/loan
+# {
+#   "amount": 5000,
+#   "term": 6
+# }
