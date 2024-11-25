@@ -1,9 +1,9 @@
-Full Stack Mini Loan App
+# Full Stack Mini Loan App
 
-Live Demo:
+# Live Demo:
 Access the deployed application here: https://full-stack-mini-loan-app.vercel.app/
 
-Repository:
+# Repository:
 GitHub Repository: https://github.com/kumarnaveen76695/full-stack-mini-loan-app.git
 
 Project Overview
@@ -77,22 +77,22 @@ Exapmle to testing code:
 
 //patch url for gteing http://localhost:5000/api/loans/67401fbd142c0bd8de7f2d11/approve
 //posturl for register http://localhost:5000/api/auth/register
-# {
-#   "name": "test1",
-#   "email": "test1@gmail.com",
-#   "password": "test1",
-#   "role": "customer" 
-# }
+{
+   "name": "test1",
+  "email": "test1@gmail.com",
+ "password": "test1",
+ "role": "customer" 
+ }
 
 //posturl for login http://localhost:5000/api/auth/login
-# {
+ {
   
-#   "email": "test1@gmail.com",
-#   "password": "test1",
-#   "role": "customer" 
-# }
+   "email": "test1@gmail.com",
+   "password": "test1",
+   "role": "customer" 
+}
 //posturl for loans http://localhost:5000/api/loan
-# {
-#   "amount": 5000,
-#   "term": 6
-# }
+{
+  "amount": 5000,
+  "term": 6
+}
