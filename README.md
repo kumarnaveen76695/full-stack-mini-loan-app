@@ -73,26 +73,3 @@ Login: Use your admin account to log in.
 Approve Loans: Approve pending loan requests from customers.
 Manage Loans: Update repayment and loan statuses as required.
 
-Exapmle to testing code:
-
-//patch url for gteing http://localhost:5000/api/loans/67401fbd142c0bd8de7f2d11/approve
-//posturl for register http://localhost:5000/api/auth/register
-{
-   "name": "test1",
-  "email": "test1@gmail.com",
- "password": "test1",
- "role": "customer" 
- }
-
-//posturl for login http://localhost:5000/api/auth/login
- {
-  
-   "email": "test1@gmail.com",
-   "password": "test1",
-   "role": "customer" 
-}
-//posturl for loans http://localhost:5000/api/loan
-{
-  "amount": 5000,
-  "term": 6
-}
